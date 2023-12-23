@@ -32,8 +32,6 @@
             CreateCSV = new Button();
             UploadCSV = new Button();
             AddWorkerButton = new Button();
-            ShowCompany = new Button();
-            ShowWorker = new Button();
             UPpanel = new Panel();
             panel1 = new Panel();
             UPpanel.SuspendLayout();
@@ -44,12 +42,13 @@
             // 
             AddCompanyButton.Cursor = Cursors.Hand;
             AddCompanyButton.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            AddCompanyButton.Location = new Point(428, 51);
+            AddCompanyButton.Location = new Point(138, 68);
             AddCompanyButton.Name = "AddCompanyButton";
             AddCompanyButton.Size = new Size(226, 50);
             AddCompanyButton.TabIndex = 1;
-            AddCompanyButton.Text = "Add Company";
+            AddCompanyButton.Text = "Companies";
             AddCompanyButton.UseVisualStyleBackColor = true;
+            AddCompanyButton.Click += AddCompanyButton_Click;
             // 
             // CreateCSV
             // 
@@ -61,6 +60,7 @@
             CreateCSV.TabIndex = 6;
             CreateCSV.Text = "Create CSV";
             CreateCSV.UseVisualStyleBackColor = true;
+            CreateCSV.Click += CreateCSV_Click;
             // 
             // UploadCSV
             // 
@@ -72,51 +72,29 @@
             UploadCSV.TabIndex = 5;
             UploadCSV.Text = "From CSV";
             UploadCSV.UseVisualStyleBackColor = true;
+            UploadCSV.Click += UploadCSV_Click;
             // 
             // AddWorkerButton
             // 
             AddWorkerButton.Cursor = Cursors.Hand;
             AddWorkerButton.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            AddWorkerButton.Location = new Point(428, 133);
+            AddWorkerButton.Location = new Point(428, 68);
             AddWorkerButton.Name = "AddWorkerButton";
             AddWorkerButton.Size = new Size(226, 50);
             AddWorkerButton.TabIndex = 4;
-            AddWorkerButton.Text = "Add Worker";
+            AddWorkerButton.Text = "Workers";
             AddWorkerButton.UseVisualStyleBackColor = true;
-            // 
-            // ShowCompany
-            // 
-            ShowCompany.Cursor = Cursors.Hand;
-            ShowCompany.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            ShowCompany.Location = new Point(138, 51);
-            ShowCompany.Name = "ShowCompany";
-            ShowCompany.Size = new Size(226, 50);
-            ShowCompany.TabIndex = 7;
-            ShowCompany.Text = "Show Company";
-            ShowCompany.UseVisualStyleBackColor = true;
-            // 
-            // ShowWorker
-            // 
-            ShowWorker.Cursor = Cursors.Hand;
-            ShowWorker.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            ShowWorker.Location = new Point(138, 133);
-            ShowWorker.Name = "ShowWorker";
-            ShowWorker.Size = new Size(226, 50);
-            ShowWorker.TabIndex = 8;
-            ShowWorker.Text = "Show Worker";
-            ShowWorker.UseVisualStyleBackColor = true;
+            AddWorkerButton.Click += AddWorkerButton_Click;
             // 
             // UPpanel
             // 
             UPpanel.BackColor = SystemColors.ControlLight;
-            UPpanel.Controls.Add(ShowCompany);
-            UPpanel.Controls.Add(ShowWorker);
             UPpanel.Controls.Add(AddCompanyButton);
             UPpanel.Controls.Add(AddWorkerButton);
             UPpanel.Dock = DockStyle.Top;
             UPpanel.Location = new Point(0, 0);
             UPpanel.Name = "UPpanel";
-            UPpanel.Size = new Size(800, 211);
+            UPpanel.Size = new Size(800, 218);
             UPpanel.TabIndex = 9;
             // 
             // panel1
@@ -149,8 +127,6 @@
         private Button CreateCSV;
         private Button UploadCSV;
         private Button AddWorkerButton;
-        private Button ShowCompany;
-        private Button ShowWorker;
         private Panel UPpanel;
         private Panel panel1;
     }
